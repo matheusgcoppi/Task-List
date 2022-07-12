@@ -67,4 +67,13 @@ function saveTasks() {
     //tasks is the name and taskJSON is What I put in add new task
 }
 
+function addTasksSaves() {
+    const tasks = localStorage.getItem('tasks');
+    const listOfTasks = JSON.parse(tasks); //parse use to convert to a object in js
+    for (const task of listOfTasks) {
+        createTask(task)
+    }
+}
+addTasksSaves();
+
 
